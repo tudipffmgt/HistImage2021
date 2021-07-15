@@ -1,13 +1,14 @@
 HistImage/
 ------------------
 This dataset contains URLs directing to an entirety of 96 historical images of four landsmarks in the vicinity of Dresden, Germany.
-The original data is provided by SLUB Dresden / Deutsche Fotothek and is not allowed to be shared in social networks like Facebook, Twitter etc.
+The original data is provided by SLUB Dresden / Deutsche Fotothek (http://www.deutschefotothek.de/) and is not allowed to be shared in social networks like Facebook, Twitter etc.
 The images are saved after digitization in full quality as *.jpg files with a maximum edge length of 1600 Px and a maximum sum of both image edges of 2800 pixels using bilinear interpolation in OpenCV.
 The orientation of all images is estimated using interactively determined tie points in Agisoft Metashape up to an estimated accuracy of 2 pixels.
 A minimum of 15 tie points is given in all images.
 The tie points (markers) are given in the Agisoft Metashape .xml export format and are also converted to .h5 files.
-This allows the used of the hierarchical localization toolbox (https://github.com/cvg/Hierarchical-Localization) (Sarlin et al., 2020) and the import into COLMAP (Schönberger et al. 2016).
+This allows the used of the hierarchical localization toolbox (https://github.com/cvg/Hierarchical-Localization) (Sarlin et al., 2020) and the import into COLMAP (https://github.com/colmap/colmap) (Schönberger et al. 2016).
 In COLMAP the image orientation can be calculated via bundle adjustment. 
+To reproduce the results of the publication it is important to enable two-view-tracks.
 This dataset includes the resulting sparse model in .txt files for further processing options.
 
 The purpose of this reference dataset is the evaluation of other feature matching methods.
@@ -15,7 +16,7 @@ Additionally, the reference positions can be used to determine the quality of a 
 Also, the methods used in the depicted paper can be reproduced and the dataset can be expanded by own tie points or images to construct more complex models.
 
 Format of .h5 files according to Sarlin et al., 2020:
-In a feature file, each key corresponds to the relative path of an image w.r.t. the dataset root (e.g. db/1.jpg for Aachen), and has one dataset per prediction (e.g. keypoints and descriptors, with shape Nx2 and DxN).
+In a feature file, each key corresponds to the relative path of an image w.r.t. the dataset root (e.g. images/df_hauptkatalog_0008003.jpg for Crowngate), and has one dataset per prediction (e.g. keypoints and descriptors, with shape Nx2 and DxN).
 In a match file, each key corresponds to the string path0.replace('/', '-')+'_'+path1.replace('/', '-') and has a dataset matches0 with shape N. 
 It indicates, for each keypoint in the first image, the index of the matching keypoint in the second image, or -1 if the keypoint is unmatched.
 
