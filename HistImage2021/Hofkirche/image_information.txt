@@ -1,6 +1,6 @@
 Image_Name	Image_Size	Permalink
 df_dat_0008340.jpg	1024x1600	http://www.deutschefotothek.de/documents/obj/90022280
-df_hauptkatalog_0006380.jpg	http://www.deutschefotothek.de/documents/obj/32022559
+df_hauptkatalog_0006380.jpg	1600x1161 http://www.deutschefotothek.de/documents/obj/32022559
 df_hauptkatalog_0006664.jpg	1054x1600	http://www.deutschefotothek.de/documents/obj/70017537
 df_hauptkatalog_0008027.jpg	1135x1600	http://www.deutschefotothek.de/documents/obj/70044648
 df_hauptkatalog_0043485.jpg	1600x1152	http://www.deutschefotothek.de/documents/obj/87713858
